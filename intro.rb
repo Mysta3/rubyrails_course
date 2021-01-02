@@ -270,12 +270,31 @@ gemfile true do
     gem 'bcrypt'
 end 
 
-require 'bcrypt'
 
-my_password = BCrypt::Password.create("my password")
 
-puts my_password
-puts my_password.version
-puts my_password.cost  
-puts my_password == "my password"
-puts my_password == "another password"
+# my_password = BCrypt::Password.create("my password")
+
+# puts my_password
+# puts my_password.version
+# puts my_password.cost  
+# puts my_password == "my password"
+# puts my_password == "another password"
+
+
+# my_password = BCrypt::Password.new('$2a$12$DBEzskqUq/QMiDdVAWr45uQgATybrRGny38eL4IWU2/neYsl8GQOa')
+# puts my_password == "my password"
+# my_password == "not my password"
+
+################################
+# Code Seperator
+################################
+users = [
+    {username: 'itachi', password: 'anbu3'},
+    {username: 'naruto', password: 'sasuke5'},
+    {username: 'sasuke', password: 'revenge7'}
+]
+
+require_relative 'crud_module' #-> using relative because it is within the same directory
+
+hashed_users = Crud.create_secure_users(users)
+puts hashed_users
