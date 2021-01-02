@@ -238,31 +238,10 @@
 # end
 
 # OOP 
-## 
-# class Student
-#   attr_accessor :first_name, :last_name, :email, :username, :password  
- 
+## filename should be same as class name
+## each class should have their own file
 
-#   def initialize(firstname,lastname,username,email,password)
-#     @first_name = firstname
-#     @last_name = lastname
-#     @username = username
-#     @email = email
-#     @password = password
-#   end
-
-#   def to_s
-#     "First Name: #{@first_name}"
-#   end
-
-#   def info_all
-#     "#{first_name} | #{last_name} | #{email}"
-#   end
-# end
-
-# itachi = Student.new("Itachi", "Uchiha", "sharinganmaster@test.com", "shariGAN45", "password")
-# puts itachi.info_all
-
+## Using bcrypt
 require 'bundler/inline'
 
 gemfile true do
